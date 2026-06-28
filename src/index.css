@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-signature: "Alex Brush", cursive;
+  
+  --color-gold-50: #FCFAF2;
+  --color-gold-100: #F8F2D9;
+  --color-gold-200: #F1E2AE;
+  --color-gold-300: #E2C76A;
+  --color-gold-400: #D4AF37;
+  --color-gold-500: #C29B2C;
+  --color-gold-600: #A88320;
+  --color-gold-700: #856616;
+  --color-gold-800: #5C450D;
+  --color-gold-900: #362805;
+  
+  --color-dark-50: #FCFCFA;
+  --color-dark-100: #F5F5F0;
+  --color-dark-200: #E6E6DF;
+  --color-dark-300: #C7C7BF;
+  --color-dark-400: #8F8F89;
+  --color-dark-500: #666661;
+  --color-dark-600: #333333;
+  --color-dark-700: #222222;
+  --color-dark-800: #1A1A1A;
+  --color-dark-900: #111111;
+  --color-dark-950: #050505;
+}
+
+/* Custom CSS utilities for animation and premium UX */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gold radial glow and ambient backdrops */
+.bg-gold-radial {
+  background: radial-gradient(circle at 50% 50%, rgba(163, 133, 94, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+}
+
+.glass-premium {
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(163, 133, 94, 0.15);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(163, 133, 94, 0.12);
+}
+
+/* Smooth custom scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
